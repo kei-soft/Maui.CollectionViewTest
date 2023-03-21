@@ -1,3 +1,3 @@
 # Maui.CollectionViewTest
 
-Blog : https://kjcoder.tistory.com/1827
+Blog : https://kjun.kr/1827 , https://kjun.kr/1833
