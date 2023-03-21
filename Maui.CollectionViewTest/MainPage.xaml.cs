@@ -15,6 +15,8 @@ public partial class MainPage : ContentPage
         }
 
         this.listview.ItemsSource = list;
+
+        this.listview2.ItemsSource = list;
     }
 }
 

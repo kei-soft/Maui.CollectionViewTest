@@ -4,15 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <CollectionView x:Name="listview" ItemsLayout="VerticalGrid, 2">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Button
-                    Margin="10"
-                    ClassId="{Binding .}"
-                    Text="{Binding ., StringFormat='{0} 번'}" />
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+    <Grid RowDefinitions="*,*">
+        <CollectionView x:Name="listview" ItemsLayout="VerticalGrid, 2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Margin="10"
+                        ClassId="{Binding .}"
+                        Text="{Binding ., StringFormat='{0} 번'}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
 
+        <CollectionView
+            x:Name="listview2"
+            Grid.Row="1"
+            ItemsLayout="HorizontalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Margin="10"
+                        ClassId="{Binding .}"
+                        HeightRequest="160"
+                        Text="{Binding ., StringFormat='{0} DAY'}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>
